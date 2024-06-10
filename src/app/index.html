@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Calculations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Financial Calculations</h1>
+
+        <div class="form-section">
+            <h2>Net Present Value (NPV) of Future Cash Flows</h2>
+            <form id="npv-form">
+                <label for="cashFlows">Enter Future Cash Flows (comma separated):</label>
+                <input type="text" id="cashFlows" name="cashFlows" required>
+                
+                <label for="rate">Discount Rate (in %):</label>
+                <input type="number" id="rate" name="rate" required>
+                
+                <button type="button" onclick="calculateNPV()">Calculate NPV</button>
+            </form>
+            <p id="npv-result"></p>
+        </div>
+
+        <div class="form-section">
+            <h2>Investment Growth</h2>
+            <form id="investment-form">
+                <label for="initialInvestment">Initial Investment:</label>
+                <input type="number" id="initialInvestment" name="initialInvestment" required>
+                
+                <label for="periodicInvestment">Periodic Investment:</label>
+                <input type="number" id="periodicInvestment" name="periodicInvestment" required>
+                
+                <label for="periods">Number of Periods:</label>
+                <input type="number" id="periods" name="periods" required>
+                
+                <label for="growthRate">Growth Rate (in %):</label>
+                <input type="number" id="growthRate" name="growthRate" required>
+                
+                <button type="button" onclick="calculateInvestmentGrowth()">Calculate Growth</button>
+            </form>
+            <p id="investment-result"></p>
+        </div>
+
+        <div class="form-section">
+            <h2>Leasing of Equipment</h2>
+            <form id="leasing-form">
+                <label for="leasePayment">Lease Payment:</label>
+                <input type="number" id="leasePayment" name="leasePayment" required>
+                
+                <label for="leasePeriods">Number of Lease Periods:</label>
+                <input type="number" id="leasePeriods" name="leasePeriods" required>
+                
+                <label for="leaseRate">Lease Rate (in %):</label>
+                <input type="number" id="leaseRate" name="leaseRate" required>
+                
+                <button type="button" onclick="calculateLeasing()">Calculate Leasing</button>
+            </form>
+            <p id="leasing-result"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
